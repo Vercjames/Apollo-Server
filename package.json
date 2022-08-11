@@ -6,18 +6,16 @@
   "description": "Application For An Apollo Server",
   "repository": "https://github.com/Vercjames/Apollo-Server.git",
   "homepage": "https://github.com/Vercjames/Apollo-Server#readme",
-  "main": "index.ts",
-  "type": "module",
   "private": true,
   "scripts": {
     "start": "nodemon index.ts",
-    "publish": "node dist/server.js",
-    "build": "tsc -p .",
-    "lint:fix": "eslint --fix \"**/*.{ts}\"",
-    "lint": "eslint \"**/*.{ts}\""
+    "build": "tsc --build",
+    "lint:fix": "eslint --fix ./**/*.ts",
+    "lint": "eslint ./**/*.ts"
   },
   "dependencies": {
     "apollo-server-express": "^3.10.0",
+    "dotenv": "^16.0.1",
     "express": "^4.18.1"
   },
   "devDependencies": {
